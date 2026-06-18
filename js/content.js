@@ -1,72 +1,79 @@
-export const ZONES = [
+// Escenas del tour fotográfico
+// pins: { left, top } = porcentaje desde esquina superior izquierda de la foto
+export const SCENES = [
   {
-    id: 'torre',
-    label: 'Torre Central',
-    pinLocal: { x: -0.3, y: 0.5, z: 0.5 },
+    id: 'exterior',
+    titulo: '🏛️ Monumento a la Bandera — Exterior',
     foto: 'fotos/torre.jpg',
-    info: 'Mide 70 metros de altura — casi lo mismo que 23 jirafas una arriba de la otra. Desde su cima se puede ver el Río Paraná y toda la ciudad de Rosario.',
-    pregunta: '¿Qué creen que hay en la cima de la torre?'
-  },
-  {
-    id: 'propileo',
-    label: 'Propileo',
-    pinLocal: { x: -1.0, y: 0.6, z: 1.2 },
-    foto: 'fotos/propileo.jpg',
-    info: 'Son los arcos de entrada al monumento. La palabra "Propileo" viene del griego y significa "puerta de entrada". Tiene estatuas que representan la Patria y la Libertad.',
-    pregunta: '¿Qué dos palabras representan esas estatuas enormes?'
+    pins: [
+      {
+        id: 'torre',
+        label: 'Torre Central',
+        left: 72, top: 18,
+        info: 'Mide 70 metros de altura — casi lo mismo que 23 jirafas una arriba de la otra. Desde su cima se puede ver el Río Paraná y toda la ciudad de Rosario.',
+        fotoCard: 'fotos/torre.jpg',
+        pregunta: '¿Qué creen que hay en la cima de la torre?'
+      },
+      {
+        id: 'propileo',
+        label: 'Propileo',
+        left: 48, top: 58,
+        info: 'Son los arcos de entrada al monumento. La palabra "Propileo" viene del griego y significa "puerta de entrada". Tiene estatuas que representan la Patria y la Libertad.',
+        fotoCard: 'fotos/propileo.jpg',
+        pregunta: '¿Qué dos palabras representan esas estatuas enormes?'
+      }
+    ]
   },
   {
     id: 'llama',
-    label: 'Llama Votiva',
-    pinLocal: { x: 0.6, y: 0.4, z: 0.9 },
+    titulo: '🔥 Llama Votiva',
     foto: 'fotos/llama.jpg',
-    info: 'Esta llama nunca se apaga. Está encendida las 24 horas del día, los 365 días del año, en honor a todos los argentinos que lucharon por la patria.',
-    pregunta: '¿Por qué creen que no dejan que se apague nunca?'
+    pins: [
+      {
+        id: 'llama',
+        label: 'Llama Votiva',
+        left: 76, top: 52,
+        info: 'Esta llama nunca se apaga. Está encendida las 24 horas del día, los 365 días del año, en honor a todos los argentinos que lucharon por la patria.',
+        fotoCard: 'fotos/llama.jpg',
+        pregunta: '¿Por qué creen que no dejan que se apague nunca?'
+      }
+    ]
   },
   {
     id: 'patio',
-    label: 'Patio de Honor',
-    pinLocal: { x: -0.3, y: 0.2, z: 1.4 },
+    titulo: '🌿 Patio de Honor',
     foto: 'fotos/patio.jpg',
-    info: 'Aquí se realizan los actos oficiales más importantes de la Argentina. El 20 de junio, Día de la Bandera, miles de personas de todo el país se reúnen en este lugar.',
-    pregunta: '¿Qué celebramos el 20 de junio en Argentina?'
-  }
-];
-
-export const INTERIOR_SCENES = [
-  {
-    id: 'cripta',
-    label: 'Cripta de Belgrano',
-    elements: [
+    pins: [
       {
-        id: 'sarcofago',
-        label: 'Sarcófago de Manuel Belgrano',
-        position: { x: 0, y: 0.6, z: -1.5 },
-        info: 'Aquí descansan los restos de Manuel Belgrano, el creador de la Bandera Argentina. Nació en Buenos Aires en 1770 y murió en 1820, un año después de que Argentina fuera independiente.'
-      },
-      {
-        id: 'placa',
-        label: 'Placa histórica',
-        position: { x: 1.8, y: 1.0, z: 0 },
-        info: 'La placa recuerda la fecha en que Belgrano izó la bandera por primera vez: 27 de febrero de 1812, a orillas del Río Paraná en Rosario. Ese día nació la Bandera Argentina.'
+        id: 'patio',
+        label: 'Patio de Honor',
+        left: 42, top: 55,
+        info: 'Aquí se realizan los actos oficiales más importantes de la Argentina. El 20 de junio, Día de la Bandera, miles de personas de todo el país se reúnen en este lugar.',
+        fotoCard: 'fotos/patio.jpg',
+        pregunta: '¿Qué celebramos el 20 de junio en Argentina?'
       }
     ]
   },
   {
     id: 'galeria',
-    label: 'Galería de las Banderas',
-    elements: [
+    titulo: '🏳️ Galería de las Banderas',
+    foto: 'fotos/galeria.jpg',
+    pins: [
       {
-        id: 'vitrina',
-        label: 'Bandera Oficial de la Ceremonia',
-        position: { x: 0, y: 1.5, z: -3 },
-        info: 'Esta es la Bandera Oficial de la Ceremonia — la más importante del país. Es custodiada por soldados del Ejército Argentino las 24 horas del día.'
+        id: 'bandera',
+        label: 'Bandera Oficial de Ceremonia',
+        left: 50, top: 42,
+        info: 'Esta es la Bandera Oficial de la Ceremonia — la más importante del país. Es custodiada por soldados del Ejército Argentino las 24 horas del día.',
+        fotoCard: 'fotos/galeria.jpg',
+        pregunta: '¿Qué diferencia hay entre esta bandera y la que usamos en el colegio?'
       },
       {
-        id: 'provincias',
-        label: 'Banderas de las Provincias',
-        position: { x: -2.5, y: 1.2, z: 0 },
-        info: 'Cada provincia de Argentina donó su bandera al monumento. Son 24 banderas, una por cada provincia. Juntas representan que todo el país honra a Manuel Belgrano.'
+        id: 'belgrano-cripta',
+        label: 'Cripta de Belgrano',
+        left: 25, top: 65,
+        info: 'Debajo del monumento descansa Manuel Belgrano, el creador de la Bandera Argentina. Nació en Buenos Aires en 1770 y murió el 20 de junio de 1820 — por eso ese día es feriado nacional.',
+        fotoCard: 'fotos/torre.jpg',
+        pregunta: '¿Sabías que Belgrano creó la bandera hace más de 200 años?'
       }
     ]
   }
