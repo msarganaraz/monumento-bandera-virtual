@@ -2,7 +2,7 @@ export const ZONES = [
   {
     id: 'torre',
     label: 'Torre Central',
-    pinLocal: { x: 0, y: 2.2, z: 0.1 },
+    pinLocal: { x: -0.3, y: 0.5, z: 0.5 },
     foto: 'fotos/torre.jpg',
     info: 'Mide 70 metros de altura — casi lo mismo que 23 jirafas una arriba de la otra. Desde su cima se puede ver el Río Paraná y toda la ciudad de Rosario.',
     pregunta: '¿Qué creen que hay en la cima de la torre?'

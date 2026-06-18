@@ -23,8 +23,8 @@ export function initExteriorScene(container, zones, onPinClick) {
   scene.background = _makeSkyBackground();
 
   camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 0.1, 200);
-  camera.position.set(0, 2.5, 8);
-  camera.lookAt(0, 1, 0);
+  camera.position.set(0, 1.5, 5);
+  camera.lookAt(0, 0.2, 0);
 
   scene.add(new THREE.AmbientLight(0xfff4e0, 1.8));
   const sun = new THREE.DirectionalLight(0xfff8e7, 2.5);
